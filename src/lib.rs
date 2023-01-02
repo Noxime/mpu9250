@@ -94,6 +94,8 @@ pub enum MpuXDevice {
     MPU9255 = 0x73,
     /// MPU 6500
     MPU6500 = 0x70,
+    /// MPU6050
+    MPU6050 = 0x68,
 }
 
 impl MpuXDevice {
@@ -101,6 +103,7 @@ impl MpuXDevice {
         b == (MpuXDevice::MPU9250 as u8)
         || b == (MpuXDevice::MPU9255 as u8)
         || b == (MpuXDevice::MPU6500 as u8)
+        || b == (MpuXDevice::MPU6050 as u8)
     }
 
     fn marg_supported(b: u8) -> bool {
